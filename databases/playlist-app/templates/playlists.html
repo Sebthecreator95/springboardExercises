@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block heading %}all playlists!{% endblock %}
+{% block content %}
+
+
+<ul>
+{% for playlist in playlists %}
+  <li>
+     <a href="/playlists/{{ playlist.id }}">{{ playlist.name }}</a>
+  </li>
+{% endfor %}
+</ul>
+
+<p><a class="btn btn-primary" href="/playlists/add">Add a playlist</a></p>
+
+{% endblock %}
